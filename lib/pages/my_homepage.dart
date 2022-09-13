@@ -34,6 +34,7 @@ class _MyHomePageState extends State<MyHomepage> {
         children: [
           _mainBackground(),
           _curveImageContainer(),
+          _buttonContainer(),
         ],
       ),
     );
@@ -59,15 +60,23 @@ class _MyHomePageState extends State<MyHomepage> {
 
   _mainBackground() {
     return Positioned(
+        bottom: 10,
+        left: 0,
         child: Container(
-      decoration: BoxDecoration(
-          image: DecorationImage(
-              fit: BoxFit.cover, image: AssetImage("images/background.png"))),
-    ));
+          height: 300,
+          width: MediaQuery.of(context).size.width,
+          decoration: BoxDecoration(
+              image: DecorationImage(
+                  fit: BoxFit.cover,
+                  image: AssetImage("images/background.png"))),
+        ));
   }
 
   _curveImageContainer() {
     return Positioned(
+        left: 0,
+        right: -2,
+        bottom: 10,
         child: Container(
             height: MediaQuery.of(context).size.height * 0.1,
             decoration: BoxDecoration(
