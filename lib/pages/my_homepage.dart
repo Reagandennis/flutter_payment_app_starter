@@ -21,6 +21,7 @@ class _MyHomePageState extends State<MyHomepage> {
         child: Stack(
           children: [
             _headSection(),
+            _listBills(),
           ],
         ),
       ),
@@ -83,5 +84,9 @@ class _MyHomePageState extends State<MyHomepage> {
                 image: DecorationImage(
                     fit: BoxFit.cover,
                     image: AssetImage("images/curve.png")))));
+  }
+
+  _listBills() {
+    return Positioned(child: Container());
   }
 }
