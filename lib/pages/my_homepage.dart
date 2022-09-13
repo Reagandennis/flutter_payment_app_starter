@@ -1,4 +1,6 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_payment_app/component/colors.dart';
 
 class MyHomepage extends StatefulWidget {
   const MyHomepage({Key? key}) : super(key: key);
@@ -10,6 +12,9 @@ class MyHomepage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomepage> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      backgroundColor: AppColor.backGroundColor,
+      body: Container(),
+    );
   }
 }
