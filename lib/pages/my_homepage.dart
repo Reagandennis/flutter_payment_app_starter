@@ -39,6 +39,24 @@ class _MyHomePageState extends State<MyHomepage> {
     );
   }
 
+  _buttonContainer() {
+    return Positioned(
+        right: 50,
+        bottom: 10,
+        child: Container(
+          height: 60,
+          width: 60,
+          decoration: BoxDecoration(
+              image: DecorationImage(image: AssetImage("images/lines.png")),
+              boxShadow: [
+                BoxShadow(
+                    blurRadius: 15,
+                    offset: Offset(0, 1),
+                    color: Color(0xFF11324d).withOpacity(0.2))
+              ]),
+        ));
+  }
+
   _mainBackground() {
     return Positioned(
         child: Container(
