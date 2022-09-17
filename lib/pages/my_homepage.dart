@@ -121,6 +121,31 @@ class _MyHomePageState extends State<MyHomepage> {
                               image: DecorationImage(
                                   fit: BoxFit.cover,
                                   image: AssetImage("images/brand1.png"))),
+                        ),
+                        SizedBox(
+                          width: 10,
+                        ),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              "KenGen Power",
+                              style: TextStyle(
+                                  fontSize: 16,
+                                  color: AppColor.mainColor,
+                                  fontWeight: FontWeight.w700),
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Text(
+                              "ID:846594",
+                              style: TextStyle(
+                                  fontSize: 16,
+                                  color: AppColor.idColor,
+                                  fontWeight: FontWeight.w700),
+                            )
+                          ],
                         )
                       ],
                     )
