@@ -87,6 +87,26 @@ class _MyHomePageState extends State<MyHomepage> {
   }
 
   _listBills() {
-    return Positioned(child: Container());
+    return Positioned(
+        top: 320,
+        child: Container(
+          height: 130,
+          width: MediaQuery.of(context).size.width - 20,
+          decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.only(
+                  topRight: Radius.circular(30),
+                  bottomRight: Radius.circular(30)),
+              boxShadow: [
+                BoxShadow(
+                    color: Color(0xFFd8dbe0),
+                    offset: Offset(1, 1),
+                    blurRadius: 20.0,
+                    spreadRadius: 10)
+              ]),
+          child: Container(
+            margin: const EdgeInsets.only(top: 10, left: 18),
+          ),
+        ));
   }
 }
