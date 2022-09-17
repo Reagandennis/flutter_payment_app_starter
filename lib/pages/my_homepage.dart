@@ -106,6 +106,28 @@ class _MyHomePageState extends State<MyHomepage> {
               ]),
           child: Container(
             margin: const EdgeInsets.only(top: 10, left: 18),
+            child: Row(
+              children: [
+                Column(
+                  children: [
+                    Row(
+                      children: [
+                        Container(
+                          height: 60,
+                          width: 60,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                              border: Border.all(width: 3, color: Colors.grey),
+                              image: DecorationImage(
+                                  fit: BoxFit.cover,
+                                  image: AssetImage("images/brand1.png"))),
+                        )
+                      ],
+                    )
+                  ],
+                )
+              ],
+            ),
           ),
         ));
   }
