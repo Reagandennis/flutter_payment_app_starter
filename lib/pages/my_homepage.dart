@@ -150,6 +150,15 @@ class _MyHomePageState extends State<MyHomepage> {
                             )
                           ],
                         ),
+                        Container(
+                          width: 5,
+                          height: 35,
+                          decoration: BoxDecoration(
+                              color: AppColor.halfOval,
+                              borderRadius: BorderRadius.only(
+                                  topLeft: Radius.circular(30),
+                                  bottomLeft: Radius.circular(30))),
+                        )
                       ],
                     ),
                     SizedText(
@@ -190,7 +199,10 @@ class _MyHomePageState extends State<MyHomepage> {
                           style: TextStyle(
                               fontSize: 14,
                               fontWeight: FontWeight.w700,
-                              color: AppColor.mainColor),
+                              color: AppColor.idColor),
+                        ),
+                        SizedBox(
+                          height: 12,
                         )
                       ],
                     )
