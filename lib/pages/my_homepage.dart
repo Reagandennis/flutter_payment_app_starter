@@ -157,6 +157,21 @@ class _MyHomePageState extends State<MyHomepage> {
                       height: 1,
                     )
                   ],
+                ),
+                Row(
+                  children: [
+                    Column(
+                      children: [
+                        Container(
+                          width: 80,
+                          height: 30,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(30),
+                              color: AppColor.selectBackground),
+                        )
+                      ],
+                    )
+                  ],
                 )
               ],
             ),
