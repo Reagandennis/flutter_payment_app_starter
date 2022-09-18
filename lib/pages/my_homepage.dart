@@ -108,6 +108,7 @@ class _MyHomePageState extends State<MyHomepage> {
           child: Container(
             margin: const EdgeInsets.only(top: 10, left: 18),
             child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Column(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -168,6 +169,28 @@ class _MyHomePageState extends State<MyHomepage> {
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(30),
                               color: AppColor.selectBackground),
+                          child: Center(
+                            child: Text(
+                              "Select",
+                              style: TextStyle(
+                                  fontSize: 16, color: AppColor.selectColor),
+                            ),
+                          ),
+                        ),
+                        Expanded(child: Container()),
+                        Text(
+                          "\$1248.00",
+                          style: TextStyle(
+                              fontSize: 18,
+                              fontWeight: FontWeight.w900,
+                              color: AppColor.mainColor),
+                        ),
+                        Text(
+                          "Due in 3 days",
+                          style: TextStyle(
+                              fontSize: 14,
+                              fontWeight: FontWeight.w700,
+                              color: AppColor.mainColor),
                         )
                       ],
                     )
