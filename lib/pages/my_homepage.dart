@@ -90,139 +90,147 @@ class _MyHomePageState extends State<MyHomepage> {
   _listBills() {
     return Positioned(
         top: 320,
-        child: ListView.builder(
-          itemCount: 3,
-          itemBuilder: (_, index) {
-            return Container(
-              height: 130,
-              width: MediaQuery.of(context).size.width - 20,
-              decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.only(
-                      topRight: Radius.circular(30),
-                      bottomRight: Radius.circular(30)),
-                  boxShadow: [
-                    BoxShadow(
-                        color: Color(0xFFd8dbe0),
-                        offset: Offset(1, 1),
-                        blurRadius: 20.0,
-                        spreadRadius: 10)
-                  ]),
-              child: Container(
-                margin: const EdgeInsets.only(top: 10, left: 18),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Column(
+        left: 0,
+        right: 0,
+        bottom: 0,
+        child: MediaQuery.removePadding(
+            removeTop: true,
+            context: context,
+            child: ListView.builder(
+              itemCount: 3,
+              itemBuilder: (_, index) {
+                return Container(
+                  margin: const EdgeInsets.only(top: 20, right: 20),
+                  height: 130,
+                  width: MediaQuery.of(context).size.width - 20,
+                  decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.only(
+                          topRight: Radius.circular(30),
+                          bottomRight: Radius.circular(30)),
+                      boxShadow: [
+                        BoxShadow(
+                            color: Color(0xFFd8dbe0),
+                            offset: Offset(1, 1),
+                            blurRadius: 20.0,
+                            spreadRadius: 10)
+                      ]),
+                  child: Container(
+                    margin: const EdgeInsets.only(top: 10, left: 18),
+                    child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Row(
+                        Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            Container(
-                              height: 60,
-                              width: 60,
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(10),
-                                  border:
-                                      Border.all(width: 3, color: Colors.grey),
-                                  image: DecorationImage(
-                                      fit: BoxFit.cover,
-                                      image: AssetImage("images/brand1.png"))),
-                            ),
-                            SizedBox(
-                              width: 10,
-                            ),
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
+                            Row(
                               children: [
-                                Text(
-                                  "KenGen Power",
-                                  style: TextStyle(
-                                      fontSize: 16,
-                                      color: AppColor.mainColor,
-                                      fontWeight: FontWeight.w700),
+                                Container(
+                                  height: 60,
+                                  width: 60,
+                                  decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(10),
+                                      border: Border.all(
+                                          width: 3, color: Colors.grey),
+                                      image: DecorationImage(
+                                          fit: BoxFit.cover,
+                                          image:
+                                              AssetImage("images/brand1.png"))),
                                 ),
                                 SizedBox(
-                                  height: 10,
+                                  width: 10,
                                 ),
-                                Text(
-                                  "ID:846594",
-                                  style: TextStyle(
-                                      fontSize: 16,
-                                      color: AppColor.idColor,
-                                      fontWeight: FontWeight.w700),
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      "KenGen Power",
+                                      style: TextStyle(
+                                          fontSize: 16,
+                                          color: AppColor.mainColor,
+                                          fontWeight: FontWeight.w700),
+                                    ),
+                                    SizedBox(
+                                      height: 10,
+                                    ),
+                                    Text(
+                                      "ID:846594",
+                                      style: TextStyle(
+                                          fontSize: 16,
+                                          color: AppColor.idColor,
+                                          fontWeight: FontWeight.w700),
+                                    )
+                                  ],
+                                ),
+                                SizedBox(
+                                  width: 5,
+                                ),
+                                Container(
+                                  width: 5,
+                                  height: 35,
+                                  decoration: BoxDecoration(
+                                      color: AppColor.halfOval,
+                                      borderRadius: BorderRadius.only(
+                                          topLeft: Radius.circular(30),
+                                          bottomLeft: Radius.circular(30))),
                                 )
                               ],
                             ),
+                            SizedText(
+                                text: "Auto pay on 24th May 18",
+                                color: AppColor.green),
                             SizedBox(
-                              width: 5,
-                            ),
-                            Container(
-                              width: 5,
-                              height: 35,
-                              decoration: BoxDecoration(
-                                  color: AppColor.halfOval,
-                                  borderRadius: BorderRadius.only(
-                                      topLeft: Radius.circular(30),
-                                      bottomLeft: Radius.circular(30))),
+                              height: 1,
                             )
                           ],
                         ),
-                        SizedText(
-                            text: "Auto pay on 24th May 18",
-                            color: AppColor.green),
-                        SizedBox(
-                          height: 1,
-                        )
-                      ],
-                    ),
-                    Row(
-                      children: [
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
+                        Row(
                           children: [
-                            Container(
-                              width: 80,
-                              height: 30,
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(30),
-                                  color: AppColor.selectBackground),
-                              child: Center(
-                                child: Text(
-                                  "Select",
-                                  style: TextStyle(
-                                      fontSize: 16,
-                                      color: AppColor.selectColor),
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Container(
+                                  width: 80,
+                                  height: 30,
+                                  decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(30),
+                                      color: AppColor.selectBackground),
+                                  child: Center(
+                                    child: Text(
+                                      "Select",
+                                      style: TextStyle(
+                                          fontSize: 16,
+                                          color: AppColor.selectColor),
+                                    ),
+                                  ),
                                 ),
-                              ),
-                            ),
-                            Expanded(child: Container()),
-                            Text(
-                              "\$1248.00",
-                              style: TextStyle(
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.w900,
-                                  color: AppColor.mainColor),
-                            ),
-                            Text(
-                              "Due in 3 days",
-                              style: TextStyle(
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w700,
-                                  color: AppColor.idColor),
-                            ),
-                            SizedBox(
-                              height: 12,
+                                Expanded(child: Container()),
+                                Text(
+                                  "\$1248.00",
+                                  style: TextStyle(
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.w900,
+                                      color: AppColor.mainColor),
+                                ),
+                                Text(
+                                  "Due in 3 days",
+                                  style: TextStyle(
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.w700,
+                                      color: AppColor.idColor),
+                                ),
+                                SizedBox(
+                                  height: 12,
+                                )
+                              ],
                             )
                           ],
                         )
                       ],
-                    )
-                  ],
-                ),
-              ),
-            );
-          },
-        ));
+                    ),
+                  ),
+                );
+              },
+            )));
   }
 }
