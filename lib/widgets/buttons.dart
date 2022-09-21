@@ -12,41 +12,43 @@ class AppButtons extends StatelessWidget {
   final Color? iconColor;
   final Color? textColor;
   final String? text;
-  const AppButtons({Key? key,
-this.fontSize = 20,
-this.textColor = AppColor.mainColor,
-this.iconColor = Colors.white,
-this.backgroundColor = AppColor.mainColor,
- this.text,
-required this.icon,
-this.onTap,
-  
-  }) : super(key: key)
+  const AppButtons({
+    Key? key,
+    this.fontSize = 20,
+    this.textColor = AppColor.mainColor,
+    this.iconColor = Colors.white,
+    this.backgroundColor = AppColor.mainColor,
+    this.text,
+    required this.icon,
+    this.onTap,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: onTap,
-      child: Column(
-        children: [
-          Container(
-            width: 40,
-            height: 40,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(20),
-              color: backgroundColor,
+        onTap: onTap,
+        child: Column(
+          children: [
+            Container(
+              width: 40,
+              height: 40,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(20),
+                color: backgroundColor,
+              ),
+              child: Icon(
+                icon,
+                size: 30,
+                color: iconColor,
+              ),
             ),
-            child: Icon(icon, size:30, color: iconColor,),
-          ),
-          text!=null?Text(
-            text!,
-            style: TextStyle(
-              fontSize: 14,
-              color: textColor
-            ),
-          ):Container()
-        ],
-      )
-    );
-  }  
+            text != null
+                ? Text(
+                    text!,
+                    style: TextStyle(fontSize: 14, color: textColor),
+                  )
+                : Container()
+          ],
+        ));
+  }
 }
