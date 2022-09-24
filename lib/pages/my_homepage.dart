@@ -73,6 +73,7 @@ class _MyHomePageState extends State<MyHomepage> {
                             top: 0,
                             right: 52,
                             child: Container(
+                              margin: const EdgeInsets.only(top: 8),
                               width: 60,
                               height: 250,
                               decoration: BoxDecoration(
@@ -88,7 +89,21 @@ class _MyHomePageState extends State<MyHomepage> {
                                     onTap: () {
                                       Navigator.pop(context);
                                     },
-                                  )
+                                  ),
+                                  AppButtons(
+                                      icon: Icons.cancel,
+                                      iconColor: AppColor.mainColor,
+                                      textColor: Colors.white,
+                                      backgroundColor: Colors.white,
+                                      onTap: () {},
+                                      text: "Add Bill"),
+                                  AppButtons(
+                                      icon: Icons.cancel,
+                                      iconColor: AppColor.mainColor,
+                                      textColor: Colors.white,
+                                      backgroundColor: Colors.white,
+                                      onTap: () {},
+                                      text: "History")
                                 ],
                               ),
                             ))
