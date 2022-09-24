@@ -94,6 +94,7 @@ class _MyHomePageState extends State<MyHomepage> {
             )));
   }
 
+// this is the main background please check it out
   _mainBackground() {
     return Positioned(
         bottom: 10,
