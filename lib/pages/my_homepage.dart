@@ -26,26 +26,6 @@ class _MyHomePageState extends State<MyHomepage> {
             _headSection(),
             _listBills(),
             _payButton(),
-            Positioned(
-                left: 0,
-                top: 100,
-                child: Text(
-                  "My Bills",
-                  style: TextStyle(
-                      fontSize: 70,
-                      fontWeight: FontWeight.bold,
-                      color: Color(0xFF293952)),
-                )),
-            Positioned(
-                left: 40,
-                top: 80,
-                child: Text(
-                  "My Bills",
-                  style: TextStyle(
-                      fontSize: 50,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white),
-                ))
           ],
         ),
       ),
@@ -337,5 +317,30 @@ class _MyHomePageState extends State<MyHomepage> {
         ));
   }
 
-  _textContainer() {}
+  _textContainer() {
+    return Stack(
+      children: [
+        Positioned(
+            left: 0,
+            top: 100,
+            child: Text(
+              "My Bills",
+              style: TextStyle(
+                  fontSize: 70,
+                  fontWeight: FontWeight.bold,
+                  color: Color(0xFF293952)),
+            )),
+        Positioned(
+            left: 40,
+            top: 80,
+            child: Text(
+              "My Bills",
+              style: TextStyle(
+                  fontSize: 50,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white),
+            ))
+      ],
+    );
+  }
 }
