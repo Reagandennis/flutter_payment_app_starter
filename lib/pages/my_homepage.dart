@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_payment_app/component/colors.dart';
+import 'package:flutter_payment_app/widgets/buttons.dart';
 import 'package:flutter_payment_app/widgets/large_buttons.dart';
 import 'package:flutter_payment_app/widgets/text_size.dart';
 
@@ -77,6 +78,19 @@ class _MyHomePageState extends State<MyHomepage> {
                               decoration: BoxDecoration(
                                   color: AppColor.mainColor,
                                   borderRadius: BorderRadius.circular(29)),
+                              child: Column(
+                                children: [
+                                  AppButtons(
+                                    icon: Icons.cancel,
+                                    iconColor: AppColor.mainColor,
+                                    textColor: Colors.white,
+                                    backgroundColor: Colors.white,
+                                    onTap: () {
+                                      Navigator.pop(context);
+                                    },
+                                  )
+                                ],
+                              ),
                             ))
                       ]),
                     );
