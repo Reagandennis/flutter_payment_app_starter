@@ -26,6 +26,26 @@ class _MyHomePageState extends State<MyHomepage> {
             _headSection(),
             _listBills(),
             _payButton(),
+            Positioned(
+                left: 0,
+                top: 100,
+                child: Text(
+                  "My Bills",
+                  style: TextStyle(
+                      fontSize: 70,
+                      fontWeight: FontWeight.bold,
+                      color: Color(0xFF293952)),
+                )),
+            Positioned(
+                left: 40,
+                top: 80,
+                child: Text(
+                  "My Bills",
+                  style: TextStyle(
+                      fontSize: 50,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white),
+                ))
           ],
         ),
       ),
@@ -41,6 +61,7 @@ class _MyHomePageState extends State<MyHomepage> {
           _mainBackground(),
           _curveImageContainer(),
           _buttonContainer(),
+          //_textContainer(),
         ],
       ),
     );
@@ -73,13 +94,16 @@ class _MyHomePageState extends State<MyHomepage> {
                             top: 0,
                             right: 52,
                             child: Container(
-                              margin: const EdgeInsets.only(top: 8),
+                              padding:
+                                  const EdgeInsets.only(top: 8, bottom: 25),
                               width: 60,
                               height: 250,
                               decoration: BoxDecoration(
                                   color: AppColor.mainColor,
                                   borderRadius: BorderRadius.circular(29)),
                               child: Column(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
                                 children: [
                                   AppButtons(
                                     icon: Icons.cancel,
@@ -91,14 +115,14 @@ class _MyHomePageState extends State<MyHomepage> {
                                     },
                                   ),
                                   AppButtons(
-                                      icon: Icons.cancel,
+                                      icon: Icons.add,
                                       iconColor: AppColor.mainColor,
                                       textColor: Colors.white,
                                       backgroundColor: Colors.white,
                                       onTap: () {},
                                       text: "Add Bill"),
                                   AppButtons(
-                                      icon: Icons.cancel,
+                                      icon: Icons.history,
                                       iconColor: AppColor.mainColor,
                                       textColor: Colors.white,
                                       backgroundColor: Colors.white,
@@ -312,4 +336,6 @@ class _MyHomePageState extends State<MyHomepage> {
           textColor: Colors.white,
         ));
   }
+
+  _textContainer() {}
 }
