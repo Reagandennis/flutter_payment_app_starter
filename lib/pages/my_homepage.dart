@@ -41,7 +41,7 @@ class _MyHomePageState extends State<MyHomepage> {
           _mainBackground(),
           _curveImageContainer(),
           _buttonContainer(),
-          //_textContainer(),
+          _textContainer(),
         ],
       ),
     );
