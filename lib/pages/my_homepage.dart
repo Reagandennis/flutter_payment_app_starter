@@ -31,6 +31,7 @@ class _MyHomePageState extends State<MyHomepage> {
     );
   }
 
+// this is the head section please check it out
   _headSection() {
     return Container(
       height: 310,
@@ -44,6 +45,7 @@ class _MyHomePageState extends State<MyHomepage> {
     );
   }
 
+// this is the button container please check it out
   _buttonContainer() {
     return Positioned(
         right: 50,
@@ -109,6 +111,7 @@ class _MyHomePageState extends State<MyHomepage> {
         ));
   }
 
+// this is the curver container please check it out
   _curveImageContainer() {
     return Positioned(
         left: 0,
@@ -122,6 +125,7 @@ class _MyHomePageState extends State<MyHomepage> {
                     image: AssetImage("images/curve.png")))));
   }
 
+// this is the list bills please check it out
   _listBills() {
     return Positioned(
         top: 320,
@@ -270,6 +274,7 @@ class _MyHomePageState extends State<MyHomepage> {
         ));
   }
 
+// this is the pay button please check it out
   _payButton() {
     return Positioned(
         bottom: 20,
