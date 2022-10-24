@@ -4,7 +4,7 @@ A new Flutter project built by flutter.
 
 ## Flutter payment App
 
-this is a flutter payment app that enables users to pay electric bills to kengen.
+this is a flutter payment app that enables users to pay electric bills to kengen power firm.
 
 A few resources to get you started if this is your first Flutter project:
 
