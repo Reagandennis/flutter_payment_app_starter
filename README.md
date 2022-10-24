@@ -1,10 +1,10 @@
 # flutter_payment_app
 
-A new Flutter project.
+A new Flutter project built by flutter.
 
-## Getting Started
+## Flutter payment App
 
-This project is a starting point for a Flutter application.
+this is a flutter payment app that enables users to pay electric bills to kengen.
 
 A few resources to get you started if this is your first Flutter project:
 
