@@ -119,8 +119,12 @@ class PaymentPage extends StatelessWidget {
                                   color: AppColor.mainColor),
                             )
                           ],
-                        )
+                        ),
                       ],
+                    ),
+                    Divider(
+                      thickness: 2,
+                      color: Colors.grey.withOpacity(0.5),
                     )
                   ],
                 ),
