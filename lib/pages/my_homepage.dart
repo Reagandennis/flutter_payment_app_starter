@@ -339,7 +339,7 @@ class _MyHomePageState extends State<MyHomepage> {
                   fontSize: 50,
                   fontWeight: FontWeight.bold,
                   color: Colors.white),
-            ))
+            )),
       ],
     );
   }

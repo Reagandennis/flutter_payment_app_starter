@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:flutter_payment_app/component/colors.dart';
 
 class PaymentPage extends StatelessWidget {
   const PaymentPage({Key? key}) : super(key: key);
@@ -27,7 +28,29 @@ class PaymentPage extends StatelessWidget {
                 decoration: BoxDecoration(
                     image: DecorationImage(
                         fit: BoxFit.fitWidth,
-                        image: AssetImage("images/success.png"))))
+                        image: AssetImage("images/success.png")))),
+            Text(
+              "Success !",
+              style: TextStyle(
+                  fontSize: 30,
+                  fontWeight: FontWeight.bold,
+                  color: AppColor.mainColor),
+            ),
+            Text(
+              "Payment is completed for 2 bills",
+              style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.w600,
+                  color: AppColor.idColor),
+            ),
+            Container(
+              height: 160,
+              width: 350,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                  border: Border.all(
+                      width: 2, color: Colors.grey.withOpacity(0.5))),
+            )
           ],
         ),
       ),
