@@ -4,6 +4,10 @@ import 'package:get/get.dart';
 class DataController extends GetxController {
   var list = [].obs;
   final service = new DataServices();
+  var _loading = false.obs;
+
+  get loading => _loading.value;
+
   @override
   void onInit() {
     _loadData();
@@ -11,7 +15,15 @@ class DataController extends GetxController {
   }
 
   _loadData() async {
-    var info = service.getUsers();
-    list.addAll(await info);
+    _loading.value = false;
+    try {
+      var info = service.getUsers();
+      list.addAll(await info);
+    } catch (e) {
+      print("Encountered error !");
+      print(e);
+    } finally {
+      _loading.value = true;
+    }
   }
 }

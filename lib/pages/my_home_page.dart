@@ -30,7 +30,13 @@ class _MyHomePageState extends State<MyHomepage> {
         child: Stack(
           children: [
             _headSection(),
-            _listBills(),
+            Obx(() {
+              if (_controller.loading == false) {
+                return CircularProgressIndicator();
+              } else {
+                return _listBills();
+              }
+            }),
             _payButton(),
           ],
         ),
@@ -175,7 +181,7 @@ class _MyHomePageState extends State<MyHomepage> {
           removeTop: true,
           context: context,
           child: ListView.builder(
-            itemCount: 3,
+            itemCount: _controller.list.length,
             itemBuilder: (_, index) {
               return Container(
                 margin: const EdgeInsets.only(top: 20, right: 20),
@@ -199,6 +205,7 @@ class _MyHomePageState extends State<MyHomepage> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Row(
@@ -255,10 +262,10 @@ class _MyHomePageState extends State<MyHomepage> {
                             ],
                           ),
                           SizedText(
-                              text: "Auto pay on 24th May 18",
+                              text: _controller.list[index]["more"],
                               color: AppColor.green),
                           SizedBox(
-                            height: 1,
+                            height: 5,
                           )
                         ],
                       ),
@@ -284,7 +291,7 @@ class _MyHomePageState extends State<MyHomepage> {
                               ),
                               Expanded(child: Container()),
                               Text(
-                                "\$1248.00",
+                                "\$" + _controller.list[index]["due"],
                                 style: TextStyle(
                                     fontSize: 18,
                                     fontWeight: FontWeight.w900,
