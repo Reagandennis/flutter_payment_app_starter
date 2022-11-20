@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_payment_app/component/colors.dart';
+import 'package:flutter_payment_app/controllers/data_controllers.dart';
 import 'package:flutter_payment_app/pages/payment_page.dart';
 import 'package:flutter_payment_app/widgets/buttons.dart';
 import 'package:flutter_payment_app/widgets/large_buttons.dart';
@@ -15,8 +16,11 @@ class MyHomepage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomepage> {
+  final DataController _controller = Get.put(DataController());
+
   @override
   Widget build(BuildContext context) {
+    print(_controller.list);
     double h = MediaQuery.of(context).size.height;
     double w = MediaQuery.of(context).size.width;
     return Scaffold(
@@ -218,7 +222,7 @@ class _MyHomePageState extends State<MyHomepage> {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Text(
-                                    "KenGen Power",
+                                    _controller.list[index]["brand"],
                                     style: TextStyle(
                                         fontSize: 16,
                                         color: AppColor.mainColor,
