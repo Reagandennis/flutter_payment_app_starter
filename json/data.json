@@ -4,7 +4,8 @@
         "date": "12-01-08",
         "status": false,
         "due":"1280.00",
-        "more": "Pay before"
+        "more": "Pay before",
+        "img" : "images/brand1.png"
     },
 
     {
@@ -12,14 +13,16 @@
         "date": "12-01-08",
         "status": false,
         "due":"3280.00",
-        "more": "You must pay now"
+        "more": "You must pay now",
+        "img" : "images/brand2.png"
     },
     {
         "brand": "Airtel Power",
         "date": "12-01-08",
         "status": false,
         "due":"1387.10",
-        "more": "Due is 3 days"
+        "more": "Due is 3 days",
+        "img" : "images/brand3.png"
     }
 
 ]

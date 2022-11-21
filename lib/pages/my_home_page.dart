@@ -32,7 +32,12 @@ class _MyHomePageState extends State<MyHomepage> {
             _headSection(),
             Obx(() {
               if (_controller.loading == false) {
-                return CircularProgressIndicator();
+                return Center(
+                  child: Container(
+                      width: 100,
+                      height: 100,
+                      child: CircularProgressIndicator()),
+                );
               } else {
                 return _listBills();
               }
@@ -214,13 +219,14 @@ class _MyHomePageState extends State<MyHomepage> {
                                 height: 60,
                                 width: 60,
                                 decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(10),
-                                    border: Border.all(
-                                        width: 3, color: Colors.grey),
-                                    image: DecorationImage(
-                                        fit: BoxFit.cover,
-                                        image:
-                                            AssetImage("images/brand1.png"))),
+                                  borderRadius: BorderRadius.circular(10),
+                                  border:
+                                      Border.all(width: 3, color: Colors.grey),
+                                  image: DecorationImage(
+                                      fit: BoxFit.cover,
+                                      image: AssetImage(
+                                          _controller.list[index]["img"])),
+                                ),
                               ),
                               SizedBox(
                                 width: 10,
