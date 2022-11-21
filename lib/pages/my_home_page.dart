@@ -280,18 +280,32 @@ class _MyHomePageState extends State<MyHomepage> {
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Container(
-                                width: 80,
-                                height: 30,
-                                decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(30),
-                                    color: AppColor.selectBackground),
-                                child: Center(
-                                  child: Text(
-                                    "Select",
-                                    style: TextStyle(
-                                        fontSize: 16,
-                                        color: AppColor.selectColor),
+                              GestureDetector(
+                                onTap: () {
+                                  _controller.list[index]["status"] =
+                                      !_controller.list[index]["status"];
+                                  print(_controller.list[index]["status"]);
+                                  _controller.list.refresh();
+                                },
+                                child: Container(
+                                  width: 80,
+                                  height: 30,
+                                  decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(30),
+                                      color: _controller.list[index]
+                                                  ["status"] ==
+                                              false
+                                          ? AppColor.selectBackground
+                                          : AppColor.green),
+                                  child: Center(
+                                    child: Text("Select",
+                                        style: TextStyle(
+                                            fontSize: 16,
+                                            color: _controller.list[index]
+                                                        ["status"] ==
+                                                    false
+                                                ? AppColor.selectColor
+                                                : Colors.white)),
                                   ),
                                 ),
                               ),
