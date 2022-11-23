@@ -286,6 +286,7 @@ class _MyHomePageState extends State<MyHomepage> {
                                       !_controller.list[index]["status"];
                                   print(_controller.list[index]["status"]);
                                   _controller.list.refresh();
+                                  print(_controller.newList.length);
                                 },
                                 child: Container(
                                   width: 80,
