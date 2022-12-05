@@ -8,13 +8,13 @@ class ProfilePage extends StatefulWidget {
 
 class ProfilePageState extends State<ProfilePage> {
   final List<BankCardModel> cards = [
-    BankCardModel('images/bg_red_card.png', 'Hoang Cuu Long',
+    BankCardModel('images/bg_red_card.png', 'Reagan Enoch Owiti',
         '4221 5168 7464 2283', '08/20', 10000000),
-    BankCardModel('images/bg_blue_circle_card.png', 'Hoang Cuu Long',
+    BankCardModel('images/bg_blue_circle_card.png', 'Reagan Enoch Owiti',
         '4221 5168 7464 2283', '08/20', 10000000),
-    BankCardModel('images/bg_purple_card.png', 'Hoang Cuu Long',
+    BankCardModel('images/bg_purple_card.png', 'Reagan Enoch Owiti',
         '4221 5168 7464 2283', '08/20', 10000000),
-    BankCardModel('images/bg_blue_card.png', 'Hoang Cuu Long',
+    BankCardModel('images/bg_blue_card.png', 'Reagan Enoch Owiti',
         '4221 5168 7464 2283', '08/20', 10000000),
   ];
 
@@ -185,11 +185,12 @@ class ProfilePageState extends State<ProfilePage> {
                     padding: const EdgeInsets.only(right: 8.0),
                     child: Icon(Icons.account_balance),
                   ),
-                  Text('My Bank Accounts',
-                  style: TextStyle(fontWeight: FontWeight.w700),)
+                  Text(
+                    'My Bank Accounts',
+                    style: TextStyle(fontWeight: FontWeight.w700),
+                  )
                 ],
-              )
-          ),
+              )),
 //          GridView.builder(
 //            physics: ScrollPhysics(),
 //              shrinkWrap: true,
@@ -199,14 +200,16 @@ class ProfilePageState extends State<ProfilePage> {
 //              itemBuilder: (BuildContext context, int index) {
 //                return _getBankCard(index);
 //              }),
-          GridView.count(crossAxisCount: size.width > 320 ? 2 : 1,
-          physics: ScrollPhysics(),
-          shrinkWrap: true,
-          childAspectRatio: (152 / 92),
+          GridView.count(
+            crossAxisCount: size.width > 320 ? 2 : 1,
+            physics: ScrollPhysics(),
+            shrinkWrap: true,
+            childAspectRatio: (152 / 92),
             controller: new ScrollController(keepScrollOffset: false),
-          children: List.generate(cards.length, (index) {
-            return _getBankCard(index);
-          }),),
+            children: List.generate(cards.length, (index) {
+              return _getBankCard(index);
+            }),
+          ),
           Container(
             margin: EdgeInsets.only(top: 16.0),
             child: GestureDetector(
@@ -237,7 +240,10 @@ class ProfilePageState extends State<ProfilePage> {
   Widget _getBankCard(int index) {
     return Padding(
       padding: const EdgeInsets.all(8.0),
-      child: SmallBankCard(card: cards[index], screenWidth: MediaQuery.of(context).size.width,),
+      child: SmallBankCard(
+        card: cards[index],
+        screenWidth: MediaQuery.of(context).size.width,
+      ),
     );
   }
 }

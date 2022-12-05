@@ -58,7 +58,8 @@ class SettingsPageState extends State<SettingsPage> {
                                           child: Row(
                                             children: <Widget>[
                                               Expanded(
-                                                child: Text('Long Hoang'),
+                                                child:
+                                                    Text('Reagan Enoch Owiti'),
                                               ),
                                               GestureDetector(
                                                 child: Row(
@@ -86,7 +87,7 @@ class SettingsPageState extends State<SettingsPage> {
                                             children: <Widget>[
                                               Expanded(
                                                 child: Text(
-                                                    'longhoang.2984@gmail.com'),
+                                                    'reaganprezzo@gmail.com'),
                                               ),
                                               GestureDetector(
                                                 child: Row(

@@ -9,13 +9,13 @@ class HomePage extends StatefulWidget {
 
 class HomePageState extends State<HomePage> {
   final List<BankCardModel> cards = [
-    BankCardModel('images/bg_red_card.png', 'Hoang Cuu Long',
+    BankCardModel('images/bg_red_card.png', 'Reagan Enoch Owiti',
         '4221 5168 7464 2283', '08/20', 10000000),
-    BankCardModel('images/bg_blue_circle_card.png', 'Hoang Cuu Long',
+    BankCardModel('images/bg_blue_circle_card.png', 'Reagan Enoch Owiti',
         '4221 5168 7464 2283', '08/20', 10000000),
-    BankCardModel('images/bg_purple_card.png', 'Hoang Cuu Long',
+    BankCardModel('images/bg_purple_card.png', 'Reagan Enoch Owiti',
         '4221 5168 7464 2283', '08/20', 10000000),
-    BankCardModel('images/bg_blue_card.png', 'Hoang Cuu Long',
+    BankCardModel('images/bg_blue_card.png', 'Reagan Enoch Owiti',
         '4221 5168 7464 2283', '08/20', 10000000),
   ];
 
@@ -67,36 +67,35 @@ class HomePageState extends State<HomePage> {
               )
             ],
           )),
-          Stack(
-              children: <Widget>[
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: new Icon(Icons.notifications_none,
-                  size: 30.0,),
-                ),
-                new Positioned(  // draw a red marble
-                  top: 3.0,
-                  left: 3.0,
-                  child: Container(
-                    decoration: BoxDecoration(
-                      color: Color(0xFFE95482),
-                      borderRadius: BorderRadius.circular(8.0)
-                    ),
-                    child: Padding(
-                      padding: const EdgeInsets.all(2.0),
-                      child: Text(
-                        '02',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 10.0,
-                          fontWeight: FontWeight.w700
-                        ),
-                      ),
-                    ),
+          Stack(children: <Widget>[
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: new Icon(
+                Icons.notifications_none,
+                size: 30.0,
+              ),
+            ),
+            new Positioned(
+              // draw a red marble
+              top: 3.0,
+              left: 3.0,
+              child: Container(
+                decoration: BoxDecoration(
+                    color: Color(0xFFE95482),
+                    borderRadius: BorderRadius.circular(8.0)),
+                child: Padding(
+                  padding: const EdgeInsets.all(2.0),
+                  child: Text(
+                    '02',
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 10.0,
+                        fontWeight: FontWeight.w700),
                   ),
-                )
-              ]
-          ),
+                ),
+              ),
+            )
+          ]),
         ],
       ),
     );
@@ -132,8 +131,7 @@ class HomePageState extends State<HomePage> {
                 Expanded(
                   child: GestureDetector(
                     onTapUp: (tapDetail) {
-                      Navigator.push(context,
-                          SelectAccountPageRoute());
+                      Navigator.push(context, SelectAccountPageRoute());
                     },
                     child: Card(
                       child: Padding(
@@ -165,8 +163,10 @@ class HomePageState extends State<HomePage> {
                           Padding(
                             padding:
                                 const EdgeInsets.symmetric(horizontal: 8.0),
-                            child: Text('Receive\nmoney',
-                              style: TextStyle(fontWeight: FontWeight.w700),),
+                            child: Text(
+                              'Receive\nmoney',
+                              style: TextStyle(fontWeight: FontWeight.w700),
+                            ),
                           )
                         ],
                       ),
@@ -182,11 +182,9 @@ class HomePageState extends State<HomePage> {
   }
 
   Widget _sendMoneySectionWidget() {
-    var smallItemPadding = EdgeInsets.only(
-        left: 12.0, right: 12.0, top: 12.0);
+    var smallItemPadding = EdgeInsets.only(left: 12.0, right: 12.0, top: 12.0);
     if (screenWidth <= 320) {
-      smallItemPadding = EdgeInsets.only(
-          left: 10.0, right: 10.0, top: 12.0);
+      smallItemPadding = EdgeInsets.only(left: 10.0, right: 10.0, top: 12.0);
     }
     return Container(
 //      color: Colors.yellow,
@@ -285,11 +283,9 @@ class HomePageState extends State<HomePage> {
   }
 
   Widget _utilitesSectionWidget() {
-    var smallItemPadding = EdgeInsets.only(
-        left: 12.0, right: 12.0, top: 12.0);
+    var smallItemPadding = EdgeInsets.only(left: 12.0, right: 12.0, top: 12.0);
     if (screenWidth <= 320) {
-      smallItemPadding = EdgeInsets.only(
-          left: 10.0, right: 10.0, top: 12.0);
+      smallItemPadding = EdgeInsets.only(left: 10.0, right: 10.0, top: 12.0);
     }
     return Container(
 //      color: Colors.yellow,
