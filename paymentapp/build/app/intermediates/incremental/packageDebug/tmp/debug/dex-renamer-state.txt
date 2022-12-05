@@ -1,0 +1,4 @@
+#Mon Dec 05 15:09:56 EAT 2022
+base.0=/home/reagan/Desktop/flutter_payment_app_ui-master/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
+renamed.0=classes.dex
+path.0=classes.dex
