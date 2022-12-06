@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/reagan/Desktop/flutter_payment_app_ui-master/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-night-v8/values-night-v8.xml",
+            "outputFile": "/home/reagan/flutter_payment_app_starter/payment_app/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-night-v8/values-night-v8.xml",
             "map": [
                 {
-                    "source": "/home/reagan/Desktop/flutter_payment_app_ui-master/android/app/src/main/res/values-night/styles.xml",
+                    "source": "/home/reagan/flutter_payment_app_starter/payment_app/android/app/src/main/res/values-night/styles.xml",
                     "from": {
                         "startLines": "3,14",
                         "startColumns": "4,4",

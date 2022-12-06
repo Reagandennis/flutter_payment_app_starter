@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/home/reagan/Desktop/flutter_payment_app_ui-master/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-kk/values-kk.xml",
+            "outputFile": "/home/reagan/flutter_payment_app_starter/payment_app/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-kk/values-kk.xml",
             "map": [
                 {
                     "source": "/home/reagan/.gradle/caches/transforms-3/acbce933e4b464a5224ed377a62db1f5/transformed/core-1.6.0/res/values-kk/values-kk.xml",
