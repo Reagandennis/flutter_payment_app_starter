@@ -55,12 +55,12 @@ class HomePageState extends State<HomePage> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
               CircleAvatar(
-                child: Text('T'),
+                child: Text('R'),
               ),
               Container(
                 margin: EdgeInsets.symmetric(horizontal: 4.0),
                 child: Text(
-                  'Long Hoang',
+                  'Reagan Enoch',
                   style: TextStyle(
                       fontFamily: 'Poppins', fontWeight: FontWeight.w700),
                 ),

@@ -61,7 +61,7 @@ class ProfilePageState extends State<ProfilePage> {
                                           children: <Widget>[
                                             Expanded(
                                               child: Text(
-                                                'Long Hoang',
+                                                'Reagan Enoch',
                                                 style: TextStyle(
                                                     fontWeight:
                                                         FontWeight.w700),
@@ -93,7 +93,7 @@ class ProfilePageState extends State<ProfilePage> {
                                           children: <Widget>[
                                             Expanded(
                                               child: Text(
-                                                'Phone: 0937110938',
+                                                'Phone: 07960040ß50',
                                                 style: TextStyle(
                                                     fontWeight:
                                                         FontWeight.w700),
@@ -125,7 +125,7 @@ class ProfilePageState extends State<ProfilePage> {
                                           children: <Widget>[
                                             Expanded(
                                               child: Text(
-                                                'Email: longhoang.2984@gmail.com',
+                                                'Email: reaganprezzo@@gmail.com',
                                                 style: TextStyle(
                                                     fontWeight:
                                                         FontWeight.w700),
