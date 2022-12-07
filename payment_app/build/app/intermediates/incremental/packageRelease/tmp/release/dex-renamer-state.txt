@@ -1,0 +1,4 @@
+#Wed Dec 07 00:17:47 EAT 2022
+base.0=/home/reagan/flutter_payment_app_starter/payment_app/build/app/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+renamed.0=classes.dex
+path.0=classes.dex

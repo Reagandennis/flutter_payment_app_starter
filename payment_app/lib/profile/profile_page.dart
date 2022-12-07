@@ -125,7 +125,7 @@ class ProfilePageState extends State<ProfilePage> {
                                           children: <Widget>[
                                             Expanded(
                                               child: Text(
-                                                'Email: reaganprezzo@@gmail.com',
+                                                'Email: reaganprezzo@gmail.com',
                                                 style: TextStyle(
                                                     fontWeight:
                                                         FontWeight.w700),
